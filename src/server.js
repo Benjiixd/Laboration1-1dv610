@@ -32,6 +32,6 @@ const server = app.listen(4020, async () => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({name: 'world'})
+    body: JSON.stringify({name: 'ben'})
   })
 });
