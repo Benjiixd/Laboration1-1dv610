@@ -2,7 +2,10 @@ export class Controller {
     async post(req, res) {
         try {
 
-            const {name} = req.body
+            
+            
+            console.log(`Received data: ${JSON.stringify(req.body)}`)
+            let {name} = req.body
             console.log('Hello world and hello ' + name);
             res.send('Hello world and hello ' + name);
         } catch (err) {

@@ -13,6 +13,7 @@ app.use(helmet());
 app.use(cors());
 app.use((req, res, next) => {
     if (req.is('json')) {
+        console.log("its json")
         req.headers['content-type'] = 'application/json';
     }
     next();
