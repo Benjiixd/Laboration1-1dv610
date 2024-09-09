@@ -9,26 +9,20 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
+app.use(bodyParser())
 app.use(helmet());
 app.use(cors());
-app.use((req, res, next) => {
-    if (req.is('json')) {
-        console.log("its json")
-        req.headers['content-type'] = 'application/json';
-    }
-    next();
-});
 
 app.use('/', router);
 
-const server = app.listen(4020, async () => {
+const server = app.listen(2020, async () => {
   try {
     
   } catch (err) {
     console.error(err);
   }
   console.log(`Server running on port ${server.address().port}`);
-  await fetch ('http://localhost:4020/', {
+  await fetch ('http://localhost:2020/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
