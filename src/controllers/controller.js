@@ -5,7 +5,7 @@ export class Controller {
             
             
             console.log(`Received data: ${JSON.stringify(req.body)}`)
-            let {name} = req.body
+            const {name} = req.body
             console.log('Hello world and hello ' + name);
             res.send('Hello world and hello ' + name);
         } catch (err) {
