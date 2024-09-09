@@ -1,7 +1,9 @@
 export class Controller {
-    async get(req, res) {
+    async post(req, res) {
         try {
-            res.send('GET request to the homepage');
+            const name = req.body.name
+            console.log('Hello world and hello ' + name);
+            res.send('Hello world and hello ' + name);
         } catch (err) {
             console.error(err);
         }
